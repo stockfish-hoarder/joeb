@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TInstaller | Status: pending</title>
+    <style>
+        @font-face{
+            font-family: 'Cascadia';
+            src: url("CascadiaMono.ttf");
+            font-weight:normal;
+        }
+
+        body{
+            background-color:black;
+            color:rgb(153, 255, 0);
+            font-family: 'Cascadia';
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const getSHA256Hash = async (input) => {
+            const textAsBuffer = new TextEncoder().encode(input);
+            const hashBuffer = await window.crypto.subtle.digest("SHA-256", textAsBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hash = hashArray
+                .map((item) => item.toString(16).padStart(2, "0"))
+                .join("");
+            return hash;
+        };
+
+        const hah = ["de7d1b721a1e0632b7cf04edf5032c8ecffa9", "48bbd7a0088d42c4acb73eeaed59c009d", "3e23e8160039594a33894f6564e1b13", "f9a08492152b926f1a5a7e765d7", "19581e27de7ced00ff1ce50b2047e7a", "567c76b1cbaebabe5ef03f7c3017bb5b7", "8bd574fdb05c2dc5017188a2f4c32d5b81963e", "0a33eccba92404e968c665006d"];
+        const haha = ["Downloading applications...", "Unzipping WINRAR...", "Ordering macros...", "Beginning task: 4FAC-3924-8ED2-EF92", "Beginning task: 32EA-928F-F0DC2-425F", "Beginning task: 9FAD-ECB3-2462-EEA1", "Generating temporary files...", "Connecting virus LADDLEOSER 2.41", "Connecting virus INFOSTEALER b.12.2023", "Connecting virus ", "Downloading happy files!", "Buying CD "];
+        function random(min, max){
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        setInterval(function func(){
+            document.getElementById("hi").innerHTML += "<br>" + hah[random(0,hah.length - 1)];
+            window.scrollTo(0, document.body.scrollHeight);
+        }, 5);
+    </script>
+    <p id="hi">hi</p>
+</body>
+</html>

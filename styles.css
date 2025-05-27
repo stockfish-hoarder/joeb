@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@font-face{
+    font-family: "google";
+    src:url("font/ProductSans-Medium.ttf");
+    font-weight:normal;
+    font-style:normal;
+}
+.header{
+    margin:0px;
+    font-size:0.7em;
+    border-radius:10px;
+    display: flex;
+    gap:10px;
+    box-shadow:0px 10px 20px 0px black;
+}
+
+.header > a{
+    text-decoration: none;
+    color:black;
+    font-size:2em;
+    padding:10px;
+    border-radius:10px;
+    background-color:white;
+}
+
+.header > a:hover{
+    background-color:black;
+    color:white;
+}
+
+html{
+    font-family: 'google', sans-serif;
+}
+
+input{
+    height:2em;
+    margin:10px;
+    border-radius:40px;
+    border:3px rgb(50, 50, 50) solid;
+}
+
+button{
+    border-radius: 40px;
+    height:2em;
+    font-family: 'google', sans-serif;
+}
